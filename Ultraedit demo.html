@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo{
+    width: 164px;
+    height: 55px;
+display: flex;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+}
+.right ul li{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+ul{
+    display: flex;
+    gap: 32px;
+}
+.logo img{
+    width: 164px;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:23px;
+    margin: 70px;
+    font-family: sans-serif;
+}
+.first span{
+    font-size: 40px;
+}
+.first p{
+    font-size: 23px;
+    width: 43vw;
+    text-align: center;
+}
+.first button{
+    background-color:rgba(0, 225, 255, 0.999);
+    padding: 14px 16px;
+    color:white;
+    border: none;
+    border-radius: 6px;
+    font-weight:700 ;
+}
+.second{
+    max-width: 70vw;
+    margin: auto;
+}
+.btn{
+    background-color:rgba(0, 225, 255, 0.999);
+    padding: 14px 16px;
+    color:white;
+    border: none;
+    gap: 10px;
+    border-radius: 6px;
+    font-weight:700 ;
+    cursor: pointer;
+}
+.green{
+    background-color: #5cb85c;
+}
+.item{
+    padding: 23px;
+    background-color: azure;
+    border-radius: 12px;
+    font-size: 20px;
+    gap:15px;
+}
+.grid .item .itmlang{
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 36px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:12px;
+}
+.download:nth-child(1){
+font-size: 23px;
+}
+@media screen and (max-width:1045px) {
+.grid{
+    display: ;
+    grid-template-columns: 1fr;
+}  
+}
+.b{
+    display: flex;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav >
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="" srcset="">
+            </div>
+            <div class="right">
+                <ul >
+              <li><span>Products</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></li>
+                    <li><span>For Business</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></li>
+                    <li><span>Resources</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></li>
+                    <li>Academic Learning<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></li>
+                    <li>Our Company<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></li>
+                    <li><i class="fa-thin fa-language"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+           <span>Download  Ultraedit for Windows </span> 
+           <p>Download and try Ultraedit before you buy it . This Download Includes The Full Version of texteditor</p>
+           <div class="btb"><button>Download MAC or Linux</button></div>
+        </section>
+        <section class="second">
+            <span>
+    Download Ultraedit
+            </span>
+            <span class="small">v2023 | released 16/08/23
+            </span>
+            <div class="grid">
+                
+                <div class="item">
+                    <div class="itmlang"> English</div>
+                       <div class="b">
+                        <button class="blue btn">Download 32bit</button>
+                        <button class="green btn">Download 64bit</button>
+            
+                       </div>
+                </div>
+                <div class="item">
+                    
+                    <div class="itmlang"> English</div>
+                    <div class="b">
+                     <button class="blue btn">Download 32bit</button>
+                     <button class="green btn">Download 64bit</button>
+         </div>
+         </div>
+                    
+                <div class="item">
+                    <div class="itmlang"> English</div>
+                        <button class="blue btn">Download 32bit</button>
+                        <button class="green btn">Download 64bit</button>
+            
+                </div>
+                </div>
+                <div class="item">
+                    <div class="itmlang"> English</div>
+                       <div class="b">
+                        <button class="blue btn">Download 32bit</button>
+                        <button class="green btn">Download 64bit</button>
+            
+                       </div>
+                </div>
+                <div class="item">
+                    <div class="itmlang"> English</div>
+                    <div class="b">
+                     <button class="blue btn">Download 32bit</button>
+                     <button class="green btn">Download 64bit</button>
+         
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itmlang"> English</div>
+                    <div class="b">
+                     <button class="blue btn">Download 32bit</button>
+                     <button class="green btn">Download 64bit</button>
+         
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itmlang"> English</div>
+                    <div class="b">
+                     <button class="blue btn">Download 32bit</button>
+                     <button class="green btn">Download 64bit</button>
+         
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
