@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  *{
+  padding: 0;
+  margine:0;
+}
+body{
+  background-color: gray;
+}
+
+
+.inner{
+  width: 85vw;
+  height: 90vh;
+  border: 2px solid white;
+  background-color: white;
+  padding: 10px;
+  margin-left: 8px;
+  border-radius: 10px;
+  
+}
+.im{
+  width:80vw;
+  height:40vh;
+  margin-left:8px;
+  overflow: hidden;
+  overflow-wrap:
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+span{
+  
+  padding: 3px 6px;
+  margin-inline-end: 20px;
+  border:2px solid #ddd;
+  border-radius:30px;  
+  
+}
+.fillter{
+  margin-top: 10px;
+  padding: 0px 28px;
+}
+.info{
+  text-indent: 10px;
+  font-weight: 600;
+  font-family: Times New Roman;
+  
+}
+.info2{
+  font-weight: 300;
+  padding: 5px;
+}
+button{
+  padding:10px;
+  
+  margin: 20px;
+  margin-left: 35%;
+  color:lightskyblue ;
+  border-radius: 30px;
+  background:#E8F0FE;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+img{
+  border-radius: 10px;
+}
+.buton button:hover{
+  background-color: azure;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">
+      <div class="im">
+        <img width="320" height="230"src="Lake.jpg">
+      </div>
+      <div class="fillter">
+        <span>Nature</span> <span>Lake</span>
+      </div>
+      <div class="info">
+        <h2>Lake Kawaguchi</h2>
+      </div>
+      <div class="info2">
+        <p>The mountain, capped with snow, stands prominently in the background, its reflection mirroring perfectly on the calm water surface The foreground is dominated by the red and orange leaves of maple trees, creating a colorful frame around the central view.</p>
+      </div>
+      <div class="buton">
+        
+        <button>
+          Read More
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
