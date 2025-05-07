@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tag</title>
+    <style>
+        body{
+            background-color: rgb(105, 242, 247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+        .form{
+            background-color: rgb(198, 235, 124);
+            display: flex;
+            flex-direction: column;
+            border:10px solid ;
+            border-radius: 30px;
+        }
+        .form1{
+            margin: 15px;
+        }
+       
+          .name :nth-child(3){
+            padding-left: 50px;
+          }  
+        .infor label  {
+            display: flex;
+            margin: 5px;
+        }
+        label{
+            padding: px;
+        }
+        .sub{
+            background-color:rgb(24, 46, 241);
+            font-weight: 800;
+            border-radius: 15px;
+            
+            border:none;
+            text-shadow: 5px;
+        }
+        .pass{
+            margin-left: 20px;
+        }
+        .subm{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <div class="form">
+        <form action="">
+            <div class="us form1"><span> <label for="Us"> Username:</label></span>
+                <span> <input type="text" id="Us" name="username" placeholder="Enter Your Username"> </span>
+                <br></div>
+    <div class="name form1">
+        <label for="name1"> First Name</label>
+    <input type="text" class="name1 na" name="name" placeholder="First Name ">
+    
+    <label for="name2" > Last Name</label>
+    <input type="text" class="name2 na" name="name3" placeholder="Last Name">
+    
+    </div>
+    
+    <div class="pass">
+        <label for="passw">Password :</label>
+        <input type="password" name="pass" id="passw">
+    </div>
+    
+   
+
+    <div class="infor form1">
+        <label for="info1"> How Much You Know About Html & CSS</label>
+        <label for="info1"> Yes I Know</label>
+    <input type="checkbox" class="info1 i" name="info" value="Yes I Know">
+    <label for="info2"> No I am New</label>
+    <input type="checkbox" class="info2 i" name="info" value="No , I am new">
+    <label for="info3" > Know Nothing </label>
+    <input type="checkbox" class="info3 i" name="info" value="Know nothing">
+    
+    <div class="up">
+        <label for="file1"> Choose File</label>
+        <input type="file" name="file" id="file1">
+        
+    </div>
+    
+    </div>
+    <div class="subm form1">
+        <input type="submit" class="sub" name="sub">
+    </div>
+    
+    
+    </div>
+
+    </form>
+</body>
+</html>
