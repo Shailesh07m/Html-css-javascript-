@@ -42,6 +42,28 @@ padding: 40px 30px;
     color: #000000;
     text-align: center;
 }
+
+.main input[type=email],
+.main input[type=password]{
+    padding:  10px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    
+
+
+}
+.main input[type=submit]{
+   width:50%;
+   padding: 10px 9px;
+   border-radius: 200px;
+   font-weight: 900;
+   color: azure;
+   background-color:  rgb(1, 255, 15,1.2);
+   margin:10px;
+   cursor:pointer;
+   margin: 10px auto;
+   display: block;
+}
     </style>
 </head>
 <body>
@@ -49,9 +71,10 @@ padding: 40px 30px;
         <form action="" method="post">
             <h3>Welcome Back</h3>
             <h4>  Sign in  </h4>
-            <input type="email" name="mail" id="" required>
+        &nbsp;    <input type="email" name="mail" id=""  placeholder="Enter Your email">
             <br>
-            <input type="password" name="val" id="">
+           &nbsp; <input type="password" name="val" id="" placeholder="Enter password" required>
+           
             <br>
             <input type="submit" value="Sign in">
         </form>
