@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80" role="img" aria-label="CompX logo">
+  <defs>
+    <style>
+      .netflix-style { 
+        fill: #E50914; 
+        font-family: 'Bebas Neue', Arial Black, Arial, sans-serif; 
+        font-weight: 900;
+        letter-spacing: 0.1em;
+      }
+    </style>
+  </defs>
+
+  <!-- Text "CompX" in Netflix style with characteristic lean -->
+  <text x="20" y="55" class="netflix-style" font-size="52" transform="skewX(-8)">CompX</text>
+</svg>
