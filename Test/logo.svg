@@ -1,0 +1,15 @@
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagonal bracket -->
+  <path d="M20 40 L32 20 L58 20 L70 40 L58 60 L32 60 Z" 
+        fill="none" 
+        stroke="#E50914" 
+        stroke-width="5" 
+        stroke-linejoin="round" 
+        stroke-linecap="round"/>
+  
+  <!-- CompX text with better typography -->
+  <g font-family="Arial, Helvetica, sans-serif" fill="#E50914">
+    <text x="85" y="52" font-size="32" font-weight="700">Comp</text>
+    <text x="185" y="52" font-size="32" font-weight="700">X</text>
+  </g>
+</svg>
