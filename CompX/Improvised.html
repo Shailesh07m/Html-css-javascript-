@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompX - Unleash The Power</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0d0d0d;
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #000;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #ff4444;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff4444;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 60px;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            padding-left: 50px;
+        }
+        
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero h1 .unleash {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero h1 .power {
+            background: linear-gradient(135deg, #ff6666, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff4444;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #cc0000;
+        }
+        
+        /* Products Section */
+        .products-section {
+            padding: 60px 0;
+            background-color: #0d0d0d;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        
+        .section-title span {
+            color: #ff4444;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 68, 68, 0.2);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #333;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .product-description {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            color: #ff4444;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .add-to-cart {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #cc0000;
+        }
+        
+        .menu-dots {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #666;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ff4444;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero {
+                height: 400px;
+            }
+            
+            .hero-content {
+                padding-left: 20px;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Comp<span>X</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Material</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Builds</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span class="unleash">UNLEASH</span> <span class="power">THE POWER</span></h1>
+            <p>Discover the latest high-performance components for your ultimate gaming and creative setup.</p>
+            <a href="#" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+    
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">UNLEASH THE <span>POWERS</span></h2>
+            
+            <div class="products-grid">
+                <!-- Product 1: RTX 5090 Graphics Card -->
+                <div class="product-card">
+                    <div class="menu-dots">⋯</div>
+                    <img src="5090.png" alt="RyzenForge RTX 5090" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">GPU: RyzenForge RTX 5090</h3>
+                        <p class="product-description">RTX 5090 is NVIDIA's latest flagship graphics card and represents the most powerful consumer GPU ever made, built on the revolutionary Blackwell architecture and designed for both gamers and content creators who demand ultimate performance.</p>
+                        <div class="product-price">₹ 3,22,211</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2: CPU NovaCore -->
+                <div class="product-card">
+                    <div class="menu-dots">⋯</div>
+                    <img src="cpu.png" alt="NovaCore i9-1400K" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">AMD Ryzen 9 9000</h3>
+                        <p class="product-description">AMD Ryzen 9 Processors - The latest 9000 series featuring Zen 5 architecture, with the 9950X3D offering 16 cores/32 threads at up to 5.7 GHz boost clocks, 144MB cache, and second-generation 3D V-Cache technology for superior gaming performance.</p>
+                        <div class="product-price">₹71,019</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3: RTX 5090 SSD -->
+                <div class="product-card">
+                    <div class="menu-dots">⋯</div>
+                    <img src="4090.png" alt="RyzenForge RTX 4090" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">GPU: RyzenForge RTX 4090</h3>
+                        <p class="product-description">RTX 4090 is the flagship graphics processing unit (GPU) from NVIDIA's RTX 40 series, representing the pinnacle of consumer graphics performance built on the advanced Ada Lovelace architecture.</p>
+                        <div class="product-price">₹75,000</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4: RAM SpectorRGB -->
+                <div class="product-card">
+                    <div class="menu-dots">⋯</div>
+                    <img src="Ram.png" alt="SpectorRGB DDR5 64GB" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">GSkill Trident Z5 NEO RGB Series</h3>
+                        <p class="product-description">The G.Skill Trident Z5 Neo RGB is a high-performance DDR5 memory kit specifically designed for AMD platforms, featuring a sleek dual-textured design with customizable RGB lighting and advanced overclocking capabilities.</p>
+                        <div class="product-price">₹ 24,950</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 CompX. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productName = productCard.querySelector('.product-title').textContent;
+                const productPrice = productCard.querySelector('.product-price').textContent;
+                
+                // Animation effect
+                this.textContent = 'Added!';
+                this.style.backgroundColor = '#4CAF50';
+                
+                setTimeout(() => {
+                    this.textContent = 'Add to Cart';
+                    this.style.backgroundColor = '#ff4444';
+                }, 1500);
+                
+                // In a real implementation, you would add the product to a cart object/array
+                console.log(`Added to cart: ${productName} - ${productPrice}`);
+            });
+        });
+        
+        // Menu dots functionality
+        document.querySelectorAll('.menu-dots').forEach(dots => {
+            dots.addEventListener('click', function(e) {
+                e.stopPropagation();
+                alert('Product options menu would appear here');
+            });
+        });
+    </script>
+</body>
+</html>
