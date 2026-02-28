@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        //async / await= async =Make a funtcion return promise
+            //      await= makes a async function wait for  A PROMISE
+            //      Allowss you write asynchronouss code in synchronous manner
+            //      Async doesn't have resolve or reject parameters 
+            //      Everything after Await is placed in an event queue
+
+             function walk(){
+              return new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+
+    const dog=true;
+    if(dog){
+         resolve("fucker bit me ")
+    }
+    else{
+        reject('Eat shit You Liar')
+    }
+                
+            },5000)
+            })
+        }
+        
+        function clean(){
+         
+            return new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+    const work=true;
+    if(work){
+                resolve("cleaned the whole house")
+
+    }
+    else{
+        reject('Lieing again')
+    }
+                
+            },5000)
+            })
+        }
+        function trash(){
+           
+        
+           return new Promise((resolve,reject)=>{
+             setTimeout(()=>{
+                 const trashthrown=true;
+                 if(trashthrown){
+                resolve('i know life is trash ')
+
+                 }
+                 else{
+                    reject('You are trash')
+                 }
+                
+            },2000)
+           })
+        }
+
+async function chores(){
+try{
+    const walkdog= await walk();
+console.log(walkdog)
+const kitchen= await clean();
+console.log(kitchen)
+const trashoo=await trash();
+console.log(trashoo)
+}
+catch(error){
+    console.error(error)
+
+}
+}
+chores()
+            
+    </script>
+</body>
+</html>

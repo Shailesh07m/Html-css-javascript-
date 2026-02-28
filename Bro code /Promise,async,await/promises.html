@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // promises=an object that manages asynchronous operations
+        // wrap a promises object around 
+        //PENDIND ->RESOLVED OR REJECTED
+        //SYNTAX new Promise((resolve,reject)=>{asynchronous code})
+
+        // DO THESE CHORES IN ORDER
+        //1.WALK THE DOG
+        //2.CLEAN THE KITTCHEN
+        //3.TAEK OUT  TRASH
+
+        function walk(){
+              return new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+
+    const dog=true;
+    if(dog){
+         resolve("fucker bit me ")
+    }
+    else{
+        reject('Eat shit You Liar')
+    }
+                
+            },5000)
+            })
+        }
+        
+        function clean(){
+         
+            return new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+    const work=true;
+    if(work){
+                resolve("cleaned the whole house")
+
+    }
+    else{
+        reject('Lieing again')
+    }
+                
+            },5000)
+            })
+        }
+        function trash(){
+           
+        
+           return new Promise((resolve,reject)=>{
+             setTimeout(()=>{
+                 const trashthrown=flase;
+                 if(trashthrown){
+                resolve('i know life is trash ')
+
+                 }
+                 else{
+                    reject('You are trash')
+                 }
+                
+            },2000)
+           })
+        }
+
+walk().then(value=> {console.log(value) 
+    return clean()
+}).then(value=>{
+    console.log(value)
+    return trash();
+}).then(value=>{
+    console.log(value)
+    console.log('finished all work')
+}).catch(error=> console.error(error))
+
+// task may fail depending on situations 
+// stoped at 10;52 min
+    </script>
+</body>
+</html>

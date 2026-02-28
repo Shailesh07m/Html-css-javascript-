@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //fetch = Function used for making http requests to fetch resources 
+        //          (Json style data,images ,files)
+        //          Simplifies Asynchronous  dATA fetching in javascript and used for interacting with API to retrive 
+        // and send data asynchronously over the web
+        // frtch(url,{otions})
+ 
+        async function fetchdata(){
+            try{
+const response= await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+if(!response.ok){
+    throw new Error("Could not find")
+}
+const data= await response.json();
+console.log(data.name)
+            }
+            catch(error){
+console.error(error);
+            }
+        }
+         fetchdata()
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // JSON = javascript object notation data interchange format
+        //   usedd for exchange data between a server and a web application
+        // json file {key:value} OR [value1,value2,value3]
+
+        //Json.stringify()= converts a js object to a json string
+        // json.parse()= converts a json string to Js object
+
+        const names=["aandu","gandu","pandu"]
+        const jsonstr= JSON.stringify(names);
+
+        const people=`[{
+
+        "name": " Bhadwa",
+    "age":39,
+    "isalive": true,
+    "hobbies" : ["goonig","bluffing"]
+},
+{
+        "name": " Bhosadiwala",
+    "age":90,
+    "isalive": true,
+    "hobbies" : ["goonig","bluffing","sucking"]
+    }]`
+const par=JSON.parse(people)
+console.log(par)
+// const sg=JSON.stringify(people)
+//         console.log(sg)
+//         console.log(jsonstr)
+
+fetch("per.json").then(response=> response.json()).then(value => console.log(value))
+fetch("people.json").then(response=> response.json()).then(value=> value.forEach(val=> console.log(val)))
+// will do fetch tommrow 
+
+    </script>
+</body>
+</html>
