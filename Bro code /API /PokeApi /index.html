@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    img{
+        display: none;
+    }
+</style>    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="nam" placeholder="Enter Pokemon Name">
+    <Button id="btn" onclick="fetchdata()"> Find</Button>
+
+    <img id="pokeimg"src="" alt="">
+    <script src="">
+       async function fetchdata(){
+            try{
+
+        const nam= document.getElementById("nam").value.toLowerCase()        ;
+        
+const response= await fetch(`https://pokeapi.co/api/v2/pokemon/${nam}`);
+if(!response.ok){
+    throw new Error("Could not find")
+}
+const data= await response.json();
+const poke= data.sprites.front_default;
+const image=document.getElementById("pokeimg")
+image.src= poke;
+image.style.display="block"
+            }
+            catch(error){
+console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>
